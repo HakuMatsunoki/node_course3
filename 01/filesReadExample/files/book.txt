@@ -1,0 +1,8 @@
+s-extra is a drop in replacement for native fs. All methods in fs are attached to fs-extra. All fsmethods return promises if the callback isn't passed. You don't ever need to include the original fsmodule again: you can now do this: or if you prefer to make it clear that you're using fs-extra and not fs,
+you may wantto name your fs variable fselike so: you can also keep both,
+but it's redundant:
+ESM
+There is also an fs-extra/esm import, 
+that supports both default and named exports. 
+However, note that fs methods are not included in fs-extra/esm;
+you still need to import fs and/or fs/promisesseperately: Defaultexports are supported: but you probably want to just use regular fs-extra instead of fs-extra/esmfor default
